@@ -16,7 +16,7 @@ public class Recipe {
     private Integer prepTime;
     private Integer cookTime;
     private Integer servings;
-    private String sources;
+    private String source;
     private String url;
 
     @Lob
@@ -70,8 +70,8 @@ public class Recipe {
         return this.servings;
     }
 
-    public String getSources() {
-        return this.sources;
+    public String getSource() {
+        return this.source;
     }
 
     public String getUrl() {
@@ -122,8 +122,8 @@ public class Recipe {
         this.servings = servings;
     }
 
-    public void setSources(String sources) {
-        this.sources = sources;
+    public void setSource(String source) {
+        this.source = source;
     }
 
     public void setUrl(String url) {
@@ -175,8 +175,8 @@ public class Recipe {
         final Object this$servings = this.getServings();
         final Object other$servings = other.getServings();
         if (this$servings == null ? other$servings != null : !this$servings.equals(other$servings)) return false;
-        final Object this$sources = this.getSources();
-        final Object other$sources = other.getSources();
+        final Object this$sources = this.getSource();
+        final Object other$sources = other.getSource();
         if (this$sources == null ? other$sources != null : !this$sources.equals(other$sources)) return false;
         final Object this$url = this.getUrl();
         final Object other$url = other.getUrl();
@@ -221,7 +221,7 @@ public class Recipe {
         result = result * PRIME + ($cookTime == null ? 43 : $cookTime.hashCode());
         final Object $servings = this.getServings();
         result = result * PRIME + ($servings == null ? 43 : $servings.hashCode());
-        final Object $sources = this.getSources();
+        final Object $sources = this.getSource();
         result = result * PRIME + ($sources == null ? 43 : $sources.hashCode());
         final Object $url = this.getUrl();
         result = result * PRIME + ($url == null ? 43 : $url.hashCode());
@@ -240,6 +240,6 @@ public class Recipe {
     }
 
     public String toString() {
-        return "Recipe(id=" + this.getId() + ", description=" + this.getDescription() + ", prepTime=" + this.getPrepTime() + ", cookTime=" + this.getCookTime() + ", servings=" + this.getServings() + ", sources=" + this.getSources() + ", url=" + this.getUrl() + ", directions=" + this.getDirections() + ", difficulty=" + this.getDifficulty() + ", ingredients=" + this.getIngredients() + ", image=" + java.util.Arrays.deepToString(this.getImage()) + ", notes=" + this.getNotes() + ", categories=" + this.getCategories() + ")";
+        return "Recipe(id=" + this.getId() + ", description=" + this.getDescription() + ", prepTime=" + this.getPrepTime() + ", cookTime=" + this.getCookTime() + ", servings=" + this.getServings() + ", sources=" + this.getSource() + ", url=" + this.getUrl() + ", directions=" + this.getDirections() + ", difficulty=" + this.getDifficulty() + ", ingredients=" + this.getIngredients() + ", image=" + java.util.Arrays.deepToString(this.getImage()) + ", notes=" + this.getNotes() + ", categories=" + this.getCategories() + ")";
     }
 }

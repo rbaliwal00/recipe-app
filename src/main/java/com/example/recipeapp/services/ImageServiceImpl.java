@@ -5,7 +5,7 @@ import com.example.recipeapp.repostitories.RecipeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-
+import org.springframework.core.io.InputStreamSource;
 import javax.transaction.Transactional;
 import java.io.IOException;
 
@@ -38,9 +38,6 @@ public class ImageServiceImpl implements ImageService {
 
             recipeRepository.save(recipe);
         } catch (IOException e) {
-            //todo handle better
-            log.error("Error occurred", e);
-
             e.printStackTrace();
         }
     }
